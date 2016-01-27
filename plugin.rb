@@ -89,7 +89,7 @@ class OAuth2BasicAuthenticator < ::Auth::OAuth2Authenticator
   end
 end
 
-auth_provider title_setting: "oauth2_button_title",
+auth_provider title_setting: SiteSetting.oauth2_button_title,
               enabled_setting: "oauth2_enabled",
               authenticator: OAuth2BasicAuthenticator.new('oauth2_basic'),
               message: "OAuth2"
